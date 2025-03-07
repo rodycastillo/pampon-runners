@@ -1,18 +1,88 @@
 ---
 import pamponLogo from "../assets/logo.jpg";
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<div class="flex flex-col items-center justify-center h-screen bg-green-600 gap-10">
-		<h1 class="text-3xl font-bold underline text-white">
-			Pampon Runners, coming soon!
-		</h1>
-		<img src={pamponLogo.src} width="115" height="48" alt="Astro Homepage" />
-	</div>
+	<nav class="bg-white py-4 shadow-md">
+		<div class="container mx-auto flex justify-between items-center">
+			<img src={pamponLogo.src} alt="Pampon Runners" class="w-16 h-16">
+			<ul class="flex space-x-4">
+				<span class="font-bold text-2xl" style="line-height: 20px;">Pampon <br> Runners</span>
+			</ul>
+		</div>
+
+	</nav>
+  <section class="bg-[#00cf00] text-white py-20">
+		<div class="container mx-auto text-center">
+			<h1 class="text-4xl md:text-6xl font-bold">Pampo Training Camp</h1>
+			<p class="mt-4 text-lg md:text-xl">Prepárate para tu reto: 10K, 21K o 42K. <br/> ¡Entrena, acumula kilómetros y demuestra que estás listo!</p>
+			<a href="https://wa.me/521234567890?text=Hola,%20quiero%20unirme%20al%20Pampo%20Training%20Camp%20y%20participar%20en%20el%20challenge." target="_blank" class="mt-6 inline-block bg-white !text-[#00cf00] font-bold py-3 px-6 rounded-lg shadow-lg  transition hover:animate-pulse">
+				Inscríbete ahora
+			</a>
+		</div>
+	</section>
+
+	<!-- Categorías -->
+	<section class="py-16 bg-gray-100">
+		<div class="container mx-auto text-center">
+			<h2 class="text-3xl font-bold mb-8">Elige tu categoría</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<!-- Tarjeta 10K -->
+				<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+					<h3 class="text-2xl font-bold text-[#00cf00]">10K</h3>
+					<p class="mt-4">Entrena según tu distancia elegida y acumula kilómetros para alcanzar tu meta.</p>
+				</div>
+				<!-- Tarjeta 21K -->
+				<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+					<h3 class="text-2xl font-bold text-[#00cf00]">21K</h3>
+					<p class="mt-4">Entrena según tu distancia elegida y acumula kilómetros para alcanzar tu meta.</p>
+				</div>
+				<!-- Tarjeta 42K -->
+				<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+					<h3 class="text-2xl font-bold text-[#00cf00]">42K</h3>
+					<p class="mt-4">Entrena según tu distancia elegida y acumula kilómetros para alcanzar tu meta.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Beneficios -->
+	<section class="py-16 bg-white">
+		<div class="container mx-auto text-center">
+			<h2 class="text-3xl font-bold mb-8">Beneficios del Evento</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<div class="flex flex-col items-center">
+					<img src="/path-to-icon1.svg" alt="Entrenamientos" class="w-16 h-16 mb-4">
+					<p>Entrenamientos personalizados según tu distancia.</p>
+				</div>
+				<div class="flex flex-col items-center">
+					<img src="/path-to-icon2.svg" alt="Kilómetros" class="w-16 h-16 mb-4">
+					<p>Acumula kilómetros y gana puntos extra.</p>
+				</div>
+				<div class="flex flex-col items-center">
+					<img src="/path-to-icon3.svg" alt="Medalla" class="w-16 h-16 mb-4">
+					<p>Recibe tu medalla personalizada: "¡Estoy listo!".</p>
+				</div>
+				<div class="flex flex-col items-center">
+					<img src="/path-to-icon4.svg" alt="Participación" class="w-16 h-16 mb-4">
+					<p>Participa aunque no estés inscrito en la carrera de mayo.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="bg-gray-800 text-white py-8">
+		<div class="container mx-auto text-center">
+			<p>&copy; 2025 Pampon Runners. Todos los derechos reservados.</p>
+			<div class="mt-4">
+				<a href="https://instagram.com/pamponrunners" class="text-[#00cf00] hover:underline">Instagram</a>
+			</div>
+		</div>
+	</footer>
 </Layout>
